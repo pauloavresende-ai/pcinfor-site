@@ -30,3 +30,12 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 3. No DNS do domínio: `www` em CNAME para `pauloavresende-ai.github.io`, e o domínio sem `www` com os registos A do GitHub Pages.
 4. O PrestaShop antigo deixa de estar em pcinfor.pt. Se for para manter, passa para um subdomínio (ex.: `loja.pcinfor.pt`) ou fica em modo de manutenção.
 5. Os links antigos do PrestaShop deixam de funcionar: o QR dos vídeos da montra aponta para www.pcinfor.pt, que continua a funcionar.
+
+## Tinteiros e toners (`consumiveis/`)
+
+Gerado a partir de uma lista. Não editar as páginas à mão.
+
+1. Pôr a lista em `dados/consumiveis.csv` (ou passar um .xlsx): colunas `referencia;descricao;marca;tipo;cor;origem;impressoras;preco;stock;rendimento;foto`. Na coluna `impressoras`, modelos separados por vírgula e famílias por `|` (ex.: `DeskJet 2710, 2720 | ENVY 6020`).
+2. `python3 ferramentas/gerar_consumiveis.py [lista]` cria o catálogo com pesquisa (`consumiveis/index.html`), uma página por artigo e uma página por impressora.
+3. Colunas de fornecedor, custo ou preço de compra são sempre ignoradas. As fotos são copiadas para `img/consumiveis/`, para o endereço do fornecedor nunca aparecer no site.
+4. Links de pagamento: `dados/links_pagamento_consumiveis.csv` (`artigo;preco;link`). Sem link (ou com o preço mudado), a página mostra "Encomendar no WhatsApp".
