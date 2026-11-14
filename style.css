@@ -141,10 +141,11 @@ a:hover { color: var(--laranja-texto-2); }
   text-transform: uppercase; letter-spacing: 0.06em; font-size: 13px; padding: 4px 10px; border-radius: 6px;
 }
 .bf strong { font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+.bf-portes { font-weight: 700; color: #FFB38F; }
 .bf-preco b { color: #FFB38F; font-size: 17px; }
 .bf-ver { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .bf .wrap:hover .bf-ver { color: #FFB38F; }
-@media (max-width: 520px) { .bf-ver { display: none; } .bf { font-size: 14px; } }
+@media (max-width: 520px) { .bf-ver { display: none; } .bf { font-size: 14px; } .bf-preco { display: none; } }
 
 /* Banner Black Friday (página inicial) */
 .banner-bf { background: var(--bf-fundo); color: #fff; }
