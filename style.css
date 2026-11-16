@@ -400,3 +400,4 @@ h3 { font-weight: 700; font-size: 21px; line-height: 1.3; }
   .procura-consumiveis { padding: 24px; }
 }
 [hidden] { display: none !important; }
+.btn-inativo { background: var(--separador); color: var(--secundario) !important; cursor: default; }

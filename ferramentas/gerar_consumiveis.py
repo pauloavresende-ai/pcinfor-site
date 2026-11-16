@@ -419,18 +419,23 @@ def pagina_artigo(a, artigos, por_impressora, links):
     preco = preco_txt(a["preco"])
     link = links.get(a["slug"], {})
     link_ok = link.get("link") if link.get("preco") == a["preco"] else ""
-    msg = wa(f"Olá! Quero o {a['nome']} (ref. {a['ref']}) por {preco}. Está disponível?")
-    if link_ok and a["em_stock"]:
+    # Regra PCinfor: a compra é sempre paga online (Stripe) antes do levantamento ou da entrega.
+    # O WhatsApp serve só para dúvidas; sem link de pagamento o artigo não se pode comprar.
+    msg = wa(f"Olá! Tenho uma dúvida sobre o {a['nome']} (ref. {a['ref']}).")
+    if link_ok:
         botoes = (f'<a class="btn btn-comprar" href="{e(link_ok)}" target="_blank" rel="noopener">Comprar</a>'
-                  f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Falar no WhatsApp</a>')
+                  f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Tirar dúvidas</a>')
         barra = (f'<div class="barra-movel"><a class="btn btn-comprar" href="{e(link_ok)}" target="_blank" rel="noopener">Comprar {preco}</a>'
-                 f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">WhatsApp</a></div>')
-        nota = "Pagamento por MB WAY, Multibanco ou cartão. Levantamento grátis na loja, entrega rápida no Grande Porto por 4,95€, ou envio para Portugal continental por 3,95€ (Açores e Madeira 19,90€)."
+                 f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">Dúvidas</a></div>')
+        nota = ("Pagamento online por MB WAY, Multibanco ou cartão. Depois de pagar, levanta na loja do Porto sem custos "
+                "ou recebe em casa: Portugal continental 3,95€, Açores e Madeira 19,90€.")
+        if not a["em_stock"]:
+            nota += " Artigo por encomenda: depois do pagamento, avisamos quando estiver pronto."
     else:
-        botoes = f'<a class="btn btn-comprar" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Encomendar no WhatsApp</a>'
-        barra = f'<div class="barra-movel"><a class="btn btn-comprar" href="{msg}" target="_blank" rel="noopener">Encomendar · {preco}</a></div>'
-        nota = ("Diga-nos no WhatsApp e confirmamos a disponibilidade e o prazo." if not a["em_stock"]
-                else "Encomende pelo WhatsApp. Levantamento na loja do Porto ou envio combinado.")
+        botoes = (f'<span class="btn btn-comprar btn-inativo" aria-disabled="true">Brevemente à venda</span>'
+                  f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Tirar dúvidas</a>')
+        barra = f'<div class="barra-movel"><a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Tirar dúvidas</a></div>'
+        nota = "Este artigo vai estar à venda online em breve. O pagamento é sempre feito online, antes do levantamento ou da entrega."
     imp_links = "".join(
         f'<li><a href="{p}consumiveis/impressora/{slug(i)}/index.html">{e(i)}</a></li>' for i in a["impressoras"])
     linhas = [("Referência", a["ref"]), ("Marca", a["marca"]), ("Tipo", a["tipo"]), ("Cor", a["cor"]),
@@ -575,8 +580,8 @@ def pagina_catalogo(artigos, impressoras):
     <div class="seccao-titulo"><div class="kicker">Como comprar</div><h2>Simples, como deve ser.</h2></div>
     <div class="passos">
       <div class="passo"><span class="n">1</span><div><h3>Procure a impressora</h3><p>O modelo está numa etiqueta à frente ou por cima da impressora.</p></div></div>
-      <div class="passo"><span class="n">2</span><div><h3>Pague ou pergunte</h3><p>Pague por link com MB WAY, Multibanco ou cartão, ou fale connosco no WhatsApp.</p></div></div>
-      <div class="passo"><span class="n">3</span><div><h3>Levante ou receba</h3><p>Levante na loja da Rua da Alegria ou combine o envio.</p></div></div>
+      <div class="passo"><span class="n">2</span><div><h3>Pague online</h3><p>Com MB WAY, Multibanco ou cartão, em segurança. Dúvidas? Fale connosco no WhatsApp antes de comprar.</p></div></div>
+      <div class="passo"><span class="n">3</span><div><h3>Levante ou receba</h3><p>Já pago, levanta na loja da Rua da Alegria ou recebe em casa.</p></div></div>
     </div>
   </div>
 </section>
