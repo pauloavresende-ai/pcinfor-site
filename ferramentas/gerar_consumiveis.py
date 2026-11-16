@@ -424,7 +424,7 @@ def pagina_artigo(a, artigos, por_impressora, links):
     msg = wa(f"Olá! Tenho uma dúvida sobre o {a['nome']} (ref. {a['ref']}).")
     if link_ok:
         botoes = (f'<a class="btn btn-comprar" href="{e(link_ok)}" target="_blank" rel="noopener">Comprar</a>'
-                  f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Tirar dúvidas</a>')
+                  f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Dúvidas? WhatsApp</a>')
         barra = (f'<div class="barra-movel"><a class="btn btn-comprar" href="{e(link_ok)}" target="_blank" rel="noopener">Comprar {preco}</a>'
                  f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">Dúvidas</a></div>')
         nota = ("Pague online por MB WAY, Multibanco ou cartão, antes do levantamento ou do envio. "
@@ -433,8 +433,8 @@ def pagina_artigo(a, artigos, por_impressora, links):
             nota += " Artigo por encomenda: depois do pagamento, avisamos quando estiver pronto."
     else:
         botoes = (f'<span class="btn btn-comprar btn-inativo" aria-disabled="true">Brevemente à venda</span>'
-                  f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Tirar dúvidas</a>')
-        barra = f'<div class="barra-movel"><a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Tirar dúvidas</a></div>'
+                  f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Dúvidas? WhatsApp</a>')
+        barra = f'<div class="barra-movel"><a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Dúvidas? WhatsApp</a></div>'
         nota = "Este artigo vai estar à venda online em breve. O pagamento é sempre feito online, antes do levantamento ou da entrega."
     imp_links = "".join(
         f'<li><a href="{p}consumiveis/impressora/{slug(i)}/index.html">{e(i)}</a></li>' for i in a["impressoras"])
@@ -495,7 +495,7 @@ def pagina_artigo(a, artigos, por_impressora, links):
     <div>
       <div class="seccao-titulo"><div class="kicker">Impressoras compatíveis</div><h2>Funciona nestas impressoras.</h2></div>
       <ul class="lista-impressoras">{imp_links}</ul>
-      <p class="nota-pagamento" style="margin-top:16px">Não vê a sua impressora? <a href="{wa(f'Olá! Tenho a impressora ... Serve o {a["nome"]} (ref. {a["ref"]})?')}" target="_blank" rel="noopener">Pergunte-nos no WhatsApp</a> e confirmamos.</p>
+      <p class="nota-pagamento" style="margin-top:16px">Não vê a sua impressora? <a href="{wa(f'Olá! Tenho uma dúvida: o {a["nome"]} (ref. {a["ref"]}) serve na minha impressora ...?')}" target="_blank" rel="noopener">Pergunte-nos no WhatsApp</a> e confirmamos.</p>
     </div>
     <div>
       <div class="seccao-titulo"><div class="kicker">Ficha</div><h2>Características</h2></div>
@@ -513,7 +513,7 @@ def pagina_impressora(nome, arts):
     p = "../../../"
     arts = sorted(arts, key=lambda a: (a["tipo"], a["origem"] != "Compatível", a["preco"]))
     desc = f"Tinteiros e toners para a {nome}, originais e compatíveis, com preço e stock. PCinfor, Porto."
-    msg = wa(f"Olá! Preciso de consumíveis para a impressora {nome}.")
+    msg = wa(f"Olá! Tenho uma dúvida sobre consumíveis para a impressora {nome}.")
     corpo = f"""
 <section class="hero hero-curto">
   <div class="wrap">
@@ -535,7 +535,7 @@ def pagina_impressora(nome, arts):
   </div>
 </section>
 """
-    barra = f'<div class="barra-movel"><a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Perguntar no WhatsApp</a></div>'
+    barra = f'<div class="barra-movel"><a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Dúvidas? WhatsApp</a></div>'
     return cabeca(p, f"Tinteiros e toners para {nome} | PCinfor", desc) + corpo + rodape(p, barra)
 
 
@@ -543,7 +543,7 @@ def pagina_catalogo(artigos, impressoras):
     p = "../"
     marcas = sorted({a["marca"] for a in artigos if a["marca"]})
     opc_marcas = "".join(f'<option value="{e(m)}">{e(m)}</option>' for m in marcas)
-    msg = wa("Olá! Procuro um tinteiro/toner para a minha impressora: ...")
+    msg = wa("Olá! Tenho uma dúvida sobre tinteiros/toners para a minha impressora: ...")
     corpo = f"""
 <section class="hero hero-curto">
   <div class="wrap">
@@ -588,7 +588,7 @@ def pagina_catalogo(artigos, impressoras):
 <script src="dados.js"></script>
 <script src="pesquisa.js"></script>
 """
-    barra = f'<div class="barra-movel"><a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Perguntar no WhatsApp</a></div>'
+    barra = f'<div class="barra-movel"><a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Dúvidas? WhatsApp</a></div>'
     desc = "Tinteiros e toners originais e compatíveis para HP, Canon, Epson, Brother e outras marcas. Pesquise pelo modelo da impressora. PCinfor, Porto."
     return cabeca(p, "Tinteiros e toners | PCinfor", desc) + corpo + rodape(p, barra)
 
