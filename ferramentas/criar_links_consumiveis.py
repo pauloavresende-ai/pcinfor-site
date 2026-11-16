@@ -11,6 +11,7 @@ Só cria links para artigos novos ou com o preço mudado; o link antigo é desat
 
 Entrega (o cliente escolhe no pagamento):
     Levantar na loja (Porto)  0€      tarifa já existente
+    Entrega rápida Grande Porto PORTES_PORTO      criada uma vez por este script
     Envio Portugal continental  PORTES_CONTINENTE  criada uma vez por este script
     Açores e Madeira           19,90€  tarifa já existente
 O cliente pode mudar a quantidade (1 a 10).
@@ -30,6 +31,7 @@ LINKS = RAIZ / "dados" / "links_pagamento_consumiveis.csv"
 SITE = "https://www.pcinfor.pt"
 
 PORTES_CONTINENTE = 395  # cêntimos, IVA incluído
+PORTES_PORTO = 495       # entrega rápida no Grande Porto (estafeta Uber), cêntimos
 TARIFA_LOJA = "shr_1Ublvk34kwTMi5VOaGBEcRKa"
 TARIFA_ILHAS = "shr_1Ublvl34kwTMi5VOQwHPtlWs"
 
@@ -50,19 +52,19 @@ def stripe(metodo, caminho, dados=None):
         sys.exit(f"Stripe recusou {caminho}: {erro.read().decode()}")
 
 
-def tarifa_continente():
+def tarifa(nome, cents, chave_meta, dias_min, dias_max):
     for t in stripe("GET", "shipping_rates", {"active": "true", "limit": 100})["data"]:
-        if t.get("metadata", {}).get("pcinfor") == f"consumiveis-continente-{PORTES_CONTINENTE}":
+        if t.get("metadata", {}).get("pcinfor") == f"{chave_meta}-{cents}":
             return t["id"]
     return stripe("POST", "shipping_rates", {
-        "display_name": "Envio Portugal continental",
+        "display_name": nome,
         "type": "fixed_amount",
-        "fixed_amount[amount]": PORTES_CONTINENTE,
+        "fixed_amount[amount]": cents,
         "fixed_amount[currency]": "eur",
         "tax_behavior": "inclusive",
-        "delivery_estimate[minimum][unit]": "business_day", "delivery_estimate[minimum][value]": 1,
-        "delivery_estimate[maximum][unit]": "business_day", "delivery_estimate[maximum][value]": 3,
-        "metadata[pcinfor]": f"consumiveis-continente-{PORTES_CONTINENTE}",
+        "delivery_estimate[minimum][unit]": "business_day", "delivery_estimate[minimum][value]": dias_min,
+        "delivery_estimate[maximum][unit]": "business_day", "delivery_estimate[maximum][value]": dias_max,
+        "metadata[pcinfor]": f"{chave_meta}-{cents}",
     })["id"]
 
 
@@ -71,7 +73,8 @@ def main():
     links = {}
     if LINKS.exists():
         links = {l["artigo"]: l for l in csv.DictReader(LINKS.read_text(encoding="utf-8").splitlines(), delimiter=";")}
-    continente = tarifa_continente()
+    porto = tarifa("Entrega rápida Grande Porto (Porto, Gaia, Matosinhos, Maia, Gondomar)", PORTES_PORTO, "consumiveis-porto", 1, 1)
+    continente = tarifa("Envio Portugal continental", PORTES_CONTINENTE, "consumiveis-continente", 1, 3)
     novos = 0
     for a in artigos:
         atual = links.get(a["artigo"])
@@ -92,8 +95,9 @@ def main():
             "tax_id_collection[enabled]": "true",
             "shipping_address_collection[allowed_countries][0]": "PT",
             "shipping_options[0][shipping_rate]": TARIFA_LOJA,
-            "shipping_options[1][shipping_rate]": continente,
-            "shipping_options[2][shipping_rate]": TARIFA_ILHAS,
+            "shipping_options[1][shipping_rate]": porto,
+            "shipping_options[2][shipping_rate]": continente,
+            "shipping_options[3][shipping_rate]": TARIFA_ILHAS,
             "after_completion[type]": "redirect",
             "after_completion[redirect][url]": f"{SITE}/obrigado/",
             "metadata[slug]": a["artigo"],

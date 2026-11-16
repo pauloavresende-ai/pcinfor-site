@@ -425,7 +425,7 @@ def pagina_artigo(a, artigos, por_impressora, links):
                   f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Falar no WhatsApp</a>')
         barra = (f'<div class="barra-movel"><a class="btn btn-comprar" href="{e(link_ok)}" target="_blank" rel="noopener">Comprar {preco}</a>'
                  f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">WhatsApp</a></div>')
-        nota = "Pagamento por MB WAY, Multibanco ou cartão. Levantamento grátis na loja do Porto ou envio para Portugal continental por 3,95€ (Açores e Madeira 19,90€)."
+        nota = "Pagamento por MB WAY, Multibanco ou cartão. Levantamento grátis na loja, entrega rápida no Grande Porto por 4,95€, ou envio para Portugal continental por 3,95€ (Açores e Madeira 19,90€)."
     else:
         botoes = f'<a class="btn btn-comprar" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Encomendar no WhatsApp</a>'
         barra = f'<div class="barra-movel"><a class="btn btn-comprar" href="{msg}" target="_blank" rel="noopener">Encomendar · {preco}</a></div>'
