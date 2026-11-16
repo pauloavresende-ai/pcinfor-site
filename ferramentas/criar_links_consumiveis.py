@@ -27,7 +27,7 @@ from pathlib import Path
 RAIZ = Path(__file__).resolve().parent.parent
 ENTRADA = RAIZ / "dados" / "artigos_para_links.csv"
 LINKS = RAIZ / "dados" / "links_pagamento_consumiveis.csv"
-SITE = "https://pauloavresende-ai.github.io/pcinfor-site"
+SITE = "https://www.pcinfor.pt"
 
 PORTES_CONTINENTE = 395  # cêntimos, IVA incluído
 TARIFA_LOJA = "shr_1Ublvk34kwTMi5VOaGBEcRKa"

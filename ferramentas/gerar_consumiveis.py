@@ -34,7 +34,7 @@ SAIDA = RAIZ / "consumiveis"
 IMG = RAIZ / "img" / "consumiveis"
 LINKS = DADOS / "links_pagamento_consumiveis.csv"
 WHATS = "351963401241"
-SITE = "https://pauloavresende-ai.github.io/pcinfor-site"
+SITE = "https://www.pcinfor.pt"
 
 ALIASES = {
     "referencia": ["referencia", "ref", "referencia original", "codigo", "cod", "sku", "modelo consumivel"],
