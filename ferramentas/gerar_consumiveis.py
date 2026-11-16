@@ -427,8 +427,8 @@ def pagina_artigo(a, artigos, por_impressora, links):
                   f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">{ICONE_WHATS}Tirar dúvidas</a>')
         barra = (f'<div class="barra-movel"><a class="btn btn-comprar" href="{e(link_ok)}" target="_blank" rel="noopener">Comprar {preco}</a>'
                  f'<a class="btn btn-whats" href="{msg}" target="_blank" rel="noopener">Dúvidas</a></div>')
-        nota = ("Pagamento online por MB WAY, Multibanco ou cartão. Depois de pagar, levanta na loja do Porto sem custos "
-                "ou recebe em casa: Portugal continental 3,95€, Açores e Madeira 19,90€.")
+        nota = ("Pague online por MB WAY, Multibanco ou cartão, antes do levantamento ou do envio. "
+                "Levante na loja do Porto sem custos ou receba em casa: Portugal continental 3,95€, Açores e Madeira 19,90€.")
         if not a["em_stock"]:
             nota += " Artigo por encomenda: depois do pagamento, avisamos quando estiver pronto."
     else:
@@ -580,8 +580,8 @@ def pagina_catalogo(artigos, impressoras):
     <div class="seccao-titulo"><div class="kicker">Como comprar</div><h2>Simples, como deve ser.</h2></div>
     <div class="passos">
       <div class="passo"><span class="n">1</span><div><h3>Procure a impressora</h3><p>O modelo está numa etiqueta à frente ou por cima da impressora.</p></div></div>
-      <div class="passo"><span class="n">2</span><div><h3>Pague online</h3><p>Com MB WAY, Multibanco ou cartão, em segurança. Dúvidas? Fale connosco no WhatsApp antes de comprar.</p></div></div>
-      <div class="passo"><span class="n">3</span><div><h3>Levante ou receba</h3><p>Já pago, levanta na loja da Rua da Alegria ou recebe em casa.</p></div></div>
+      <div class="passo"><span class="n">2</span><div><h3>Pague online</h3><p>Com MB WAY, Multibanco ou cartão. Tem dúvidas? Fale connosco no WhatsApp antes de comprar.</p></div></div>
+      <div class="passo"><span class="n">3</span><div><h3>Levante ou receba</h3><p>Depois do pagamento, levante na loja da Rua da Alegria ou receba em casa. A fatura segue sempre consigo.</p></div></div>
     </div>
   </div>
 </section>
