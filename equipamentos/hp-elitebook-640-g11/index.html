@@ -249,7 +249,7 @@
 
 <script>
   // Link de pagamento (ifthenpay, Easypay, SumUp ou Stripe). Quando existir, colar aqui.
-  var LINK_PAGAMENTO = "";
+  var LINK_PAGAMENTO = "https://buy.stripe.com/cNi9AM2mW34sd3sf3waVa3G";
   document.querySelectorAll(".js-comprar").forEach(function (b) {
     if (LINK_PAGAMENTO) { b.href = LINK_PAGAMENTO; b.target = "_blank"; b.rel = "noopener"; return; }
     b.addEventListener("click", function (e) {
