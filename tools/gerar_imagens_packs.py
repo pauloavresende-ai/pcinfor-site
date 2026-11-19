@@ -48,6 +48,7 @@ COMPUTADORES = {
     "hp-z2-mini-g5-i9-t1000": ("hp-z2-mini-g5-frente.jpg", 22, "largura", None),
     "lenovo-thinkstation-p620": ("lenovo-p620-angulo.jpg", 44, "altura", None),
     "lenovo-thinkcentre-m720q-tiny": ("lenovo-m720q-tiny-frente.jpg", 18, "altura", None),
+    "dell-optiplex-3060-micro": ("dell-optiplex-3060-micro-frente.jpg", 18, "altura", None),
 }
 
 

@@ -45,6 +45,7 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - Lenovo ThinkCentre M700 Tiny: `https://www.pcinfor.pt/equipamentos/lenovo-thinkcentre-m700-tiny/`
 - Lenovo ThinkCentre M720q Tiny: `https://www.pcinfor.pt/equipamentos/lenovo-thinkcentre-m720q-tiny/`
 - Dell OptiPlex 3070 Micro (só o computador do pack): `https://www.pcinfor.pt/equipamentos/dell-optiplex-3070-micro/`
+- Dell OptiPlex 3060 Micro: `https://www.pcinfor.pt/equipamentos/dell-optiplex-3060-micro/`
 - HP ProDesk 400 G4 SFF: `https://www.pcinfor.pt/equipamentos/hp-prodesk-400-g4-sff/`
 - HP ProDesk 400 G4 Mini: `https://www.pcinfor.pt/equipamentos/hp-prodesk-400-g4-mini/`
 - HP EliteDesk 800 G4 SFF: `https://www.pcinfor.pt/equipamentos/hp-elitedesk-800-g4-sff/`
