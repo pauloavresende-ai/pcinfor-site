@@ -31,6 +31,7 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - HP ProBook 640 G8: `https://www.pcinfor.pt/equipamentos/hp-probook-640-g8/`
 - HP ProBook 640 G8 i7 Touch: `https://www.pcinfor.pt/equipamentos/hp-probook-640-g8-i7-touch/`
 - Lenovo ThinkPad L14 Gen 3: `https://www.pcinfor.pt/equipamentos/lenovo-thinkpad-l14-g3/`
+- Lenovo ThinkPad T14s Gen 2 Touch: `https://www.pcinfor.pt/equipamentos/lenovo-thinkpad-t14s-g2-touch/`
 - Dynabook Satellite Pro A50-J: `https://www.pcinfor.pt/equipamentos/dynabook-satellite-pro-a50-j/`
 - Dell Latitude 5440: `https://www.pcinfor.pt/equipamentos/dell-latitude-5440/`
 - Lenovo ThinkCentre M700 Tiny: `https://www.pcinfor.pt/equipamentos/lenovo-thinkcentre-m700-tiny/`
