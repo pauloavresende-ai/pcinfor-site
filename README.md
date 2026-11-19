@@ -11,10 +11,11 @@ Site estático, sem base de dados nem plugins, pronto para o GitHub Pages.
 
 ## Categorias
 
-A lista de equipamentos da página inicial está dividida em três categorias, cada uma com o seu bloco em `index.html`:
+A lista de equipamentos da página inicial está dividida em categorias, cada uma com o seu bloco em `index.html`:
 
 - Portáteis: `<div class="categoria" id="portateis">` (endereço curto `https://www.pcinfor.pt/portateis/`)
 - Computadores (mini PC e secretária): `id="computadores"` (`https://www.pcinfor.pt/computadores/`)
+- All-in-One (computador e ecrã numa só peça): `id="all-in-one"` (`https://www.pcinfor.pt/all-in-one/`). Já têm ecrã, por isso não entram nos packs com monitor.
 - Monitores (só monitores): `id="monitores"` (`https://www.pcinfor.pt/monitores/`)
 - Packs (computador + monitor juntos): `id="packs"` (`https://www.pcinfor.pt/packs/`)
 
@@ -30,11 +31,8 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - HP EliteBook 650 G9: `https://www.pcinfor.pt/equipamentos/hp-elitebook-650-g9/`
 - HP EliteBook 640 G11: `https://www.pcinfor.pt/equipamentos/hp-elitebook-640-g11/`
 - HP EliteBook 1040 G8 x360: `https://www.pcinfor.pt/equipamentos/hp-elitebook-1040-g8-x360/`
-<<<<<<< HEAD
 - HP ZBook Fury 16 G9: `https://www.pcinfor.pt/equipamentos/hp-zbook-fury-16-g9/`
-=======
 - Lenovo V15 G5: `https://www.pcinfor.pt/equipamentos/lenovo-v15-g5/`
->>>>>>> origin/main
 - HP ProBook 640 G8: `https://www.pcinfor.pt/equipamentos/hp-probook-640-g8/`
 - HP ProBook 640 G8 i7 Touch: `https://www.pcinfor.pt/equipamentos/hp-probook-640-g8-i7-touch/`
 - Dell Latitude 7430 Touch: `https://www.pcinfor.pt/equipamentos/dell-latitude-7430-touch/`
@@ -42,6 +40,7 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - Lenovo ThinkPad T14s Gen 2 Touch: `https://www.pcinfor.pt/equipamentos/lenovo-thinkpad-t14s-g2-touch/`
 - Dynabook Satellite Pro A50-J: `https://www.pcinfor.pt/equipamentos/dynabook-satellite-pro-a50-j/`
 - Dell Latitude 5440: `https://www.pcinfor.pt/equipamentos/dell-latitude-5440/`
+- HP EliteOne 840 G9 All-in-One: `https://www.pcinfor.pt/equipamentos/hp-eliteone-840-g9/`
 - Lenovo ThinkCentre M700 Tiny: `https://www.pcinfor.pt/equipamentos/lenovo-thinkcentre-m700-tiny/`
 - Dell OptiPlex 3070 Micro (só o computador do pack): `https://www.pcinfor.pt/equipamentos/dell-optiplex-3070-micro/`
 - HP ProDesk 400 G4 SFF: `https://www.pcinfor.pt/equipamentos/hp-prodesk-400-g4-sff/`
