@@ -20,6 +20,8 @@ A lista de equipamentos da página inicial está dividida em três categorias, c
 
 Um equipamento novo entra como `<article class="produto-destaque">` dentro do `<div class="lista-produtos">` da sua categoria. Ao acrescentar ou retirar, atualizar o número no botão da categoria (`<nav class="categorias">`) e o texto "N disponíveis" do bloco.
 
+Stock do fornecedor até 10 unidades: acrescentar `<span class="etiqueta ultimas-unidades">Últimas unidades</span>` às etiquetas do cartão e da página do produto. Acima de 10 unidades, não pôr nada.
+
 Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço fica fixo, por isso o QR da montra pode ser impresso e gravado no vídeo sem medo de mudar:
 
 - Pack Dell: `https://www.pcinfor.pt/equipamentos/pack-dell-34/` (redireciona para `dell-optiplex-3070-micro/#pack`)
@@ -27,6 +29,7 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - HP EliteBook 840 G7 i7: `https://www.pcinfor.pt/equipamentos/hp-elitebook-840-g7-i7/`
 - HP EliteBook 650 G9: `https://www.pcinfor.pt/equipamentos/hp-elitebook-650-g9/`
 - HP ProBook 640 G8: `https://www.pcinfor.pt/equipamentos/hp-probook-640-g8/`
+- HP ProBook 640 G8 i7 Touch: `https://www.pcinfor.pt/equipamentos/hp-probook-640-g8-i7-touch/`
 - Lenovo ThinkPad L14 Gen 3: `https://www.pcinfor.pt/equipamentos/lenovo-thinkpad-l14-g3/`
 - Dynabook Satellite Pro A50-J: `https://www.pcinfor.pt/equipamentos/dynabook-satellite-pro-a50-j/`
 - Dell Latitude 5440: `https://www.pcinfor.pt/equipamentos/dell-latitude-5440/`
