@@ -46,10 +46,11 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - Monitor HP EliteDisplay E27q G4 27″: `https://www.pcinfor.pt/equipamentos/hp-elitedisplay-e27q-g4/`
 - Monitor HP E27d G4 27″ (dock USB-C): `https://www.pcinfor.pt/equipamentos/hp-elitedisplay-e27d-g4/`
 - Monitor LG 32UP550-W 32″ 4K (USB-C): `https://www.pcinfor.pt/equipamentos/lg-32up550-w/`
+- Monitor Lenovo ThinkVision T32p-20 32″ 4K (dock USB-C): `https://www.pcinfor.pt/equipamentos/lenovo-thinkvision-t32p-20/`
 
 ## Packs com monitor
 
-Cada computador tem na sua página uma caixa por monitor (`#pack` para o Dell C3422WE 34″, `#pack-e23` para o HP E23 G4 23″, `#pack-e243m` para o HP E243m 24″, `#pack-e243d` para o HP E243d 24″ com dock USB-C, `#pack-e27q` para o HP E27q G4 27″, `#pack-e27d` para o HP E27d G4 27″ com dock USB-C, `#pack-lg32` para o LG 32UP550-W 32″ 4K), entre os comentários `PACK-MONITOR`, `PACK-E23`, `PACK-E243M`, `PACK-E243D`, `PACK-E27Q`, `PACK-E27D` e `PACK-LG32`. Na página inicial, a categoria Packs tem uma lista por monitor. Regra: quando entra um monitor novo, cria-se um pack com cada computador à venda (preço = computador + monitor, teclado e rato de oferta, slug Stripe `pack-<computador>-<monitor>`).
+Cada computador tem na sua página uma caixa por monitor (`#pack` para o Dell C3422WE 34″, `#pack-e23` para o HP E23 G4 23″, `#pack-e243m` para o HP E243m 24″, `#pack-e243d` para o HP E243d 24″ com dock USB-C, `#pack-e27q` para o HP E27q G4 27″, `#pack-e27d` para o HP E27d G4 27″ com dock USB-C, `#pack-lg32` para o LG 32UP550-W 32″ 4K, `#pack-t32p` para o Lenovo ThinkVision T32p-20 32″ 4K com dock USB-C), entre os comentários `PACK-MONITOR`, `PACK-E23`, `PACK-E243M`, `PACK-E243D`, `PACK-E27Q`, `PACK-E27D`, `PACK-LG32` e `PACK-T32P`. Na página inicial, a categoria Packs tem uma lista por monitor. Regra: quando entra um monitor novo, cria-se um pack com cada computador à venda (preço = computador + monitor, teclado e rato de oferta, slug Stripe `pack-<computador>-<monitor>`).
 
 Cada pack tem uma imagem combinada (monitor atrás, computador à frente, fundo branco) em `img/packs/pack-<computador>-<monitor>.jpg` (1200×900, caixa do pack) e uma miniatura em `img/packs/mini/` (240×180, listas de packs). Quando entra um computador ou monitor novo: acrescentar a foto e a medida em `tools/gerar_imagens_packs.py` (e o marcador em `tools/ligar_imagens_packs.py`, se for monitor), e correr na raiz do site `python3 tools/gerar_imagens_packs.py` seguido de `python3 tools/ligar_imagens_packs.py`.
 
