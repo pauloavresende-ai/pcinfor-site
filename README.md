@@ -30,7 +30,11 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - HP EliteBook 650 G9: `https://www.pcinfor.pt/equipamentos/hp-elitebook-650-g9/`
 - HP EliteBook 640 G11: `https://www.pcinfor.pt/equipamentos/hp-elitebook-640-g11/`
 - HP EliteBook 1040 G8 x360: `https://www.pcinfor.pt/equipamentos/hp-elitebook-1040-g8-x360/`
+<<<<<<< HEAD
 - HP ZBook Fury 16 G9: `https://www.pcinfor.pt/equipamentos/hp-zbook-fury-16-g9/`
+=======
+- Lenovo V15 G5: `https://www.pcinfor.pt/equipamentos/lenovo-v15-g5/`
+>>>>>>> origin/main
 - HP ProBook 640 G8: `https://www.pcinfor.pt/equipamentos/hp-probook-640-g8/`
 - HP ProBook 640 G8 i7 Touch: `https://www.pcinfor.pt/equipamentos/hp-probook-640-g8-i7-touch/`
 - Dell Latitude 7430 Touch: `https://www.pcinfor.pt/equipamentos/dell-latitude-7430-touch/`
