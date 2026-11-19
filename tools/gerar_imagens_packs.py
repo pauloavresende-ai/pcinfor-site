@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Gera as imagens combinadas computador + monitor dos packs.
 
-Uso (na raiz do site):  python3 tools/gerar_imagens_packs.py [slug-computador ...]
+Uso (na raiz do site):  python3 tools/gerar_imagens_packs.py [--monitor slug-monitor] [slug-computador ...]
 Saída: img/packs/pack-<computador>-<monitor>.jpg (1200x900, fundo branco, caixa do pack)
        img/packs/mini/pack-<computador>-<monitor>.jpg (240x180, lista de Packs da página inicial).
 
@@ -25,6 +25,7 @@ MONITORES = {
     "hp-elitedisplay-e243d": ("hp-e243d-angulo.jpg", 50),
     "hp-elitedisplay-e27q-g4": ("hp-e27q-g4-angulo.jpg", 54),
     "hp-elitedisplay-e27d-g4": ("hp-e27d-g4-angulo.jpg", 56),
+    "lg-32up550-w": ("lg-32up550-angulo.jpg", 52),
 }
 # computador: (foto, medida real em cm, "altura" ou "largura" a que a medida se refere, recorte opcional (x0,y0,x1,y1) em fração)
 COMPUTADORES = {
@@ -111,9 +112,13 @@ def compor(comp, mon):
 
 def main():
     os.makedirs(os.path.join(SAIDA, "mini"), exist_ok=True)
-    comps = sys.argv[1:] or list(COMPUTADORES)
+    args = sys.argv[1:]
+    mons = list(MONITORES)
+    if args[:1] == ["--monitor"]:
+        mons, args = [args[1]], args[2:]
+    comps = args or list(COMPUTADORES)
     for comp in comps:
-        for mon in MONITORES:
+        for mon in mons:
             destino = os.path.join(SAIDA, f"pack-{comp}-{mon}.jpg")
             img = compor(comp, mon)
             img.save(destino, "JPEG", quality=82, optimize=True, progressive=True)

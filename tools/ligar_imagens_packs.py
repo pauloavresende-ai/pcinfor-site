@@ -11,6 +11,7 @@ MONITORES = [
     ("PACK-E243D", "pack-e243d", "hp-elitedisplay-e243d", "monitor HP EliteDisplay E243d de 24″"),
     ("PACK-E27Q", "pack-e27q", "hp-elitedisplay-e27q-g4", "monitor HP EliteDisplay E27q G4 de 27″"),
     ("PACK-E27D", "pack-e27d", "hp-elitedisplay-e27d-g4", "monitor HP EliteDisplay E27d G4 de 27″"),
+    ("PACK-LG32", "pack-lg32", "lg-32up550-w", "monitor LG 32UP550-W de 32″"),
 ]
 POR_ANCORA = {a: (mon, nome) for _, a, mon, nome in MONITORES}
 
