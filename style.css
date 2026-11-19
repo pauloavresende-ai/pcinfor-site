@@ -369,3 +369,26 @@ h3 { font-weight: 700; font-size: 21px; line-height: 1.3; }
   .categorias a span { display: none; }
   .categoria { scroll-margin-top: 150px; }
 }
+
+/* Opção pack com monitor (páginas de computador) */
+.pack-monitor { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 32px; align-items: center; background: var(--cartao); border: 2px solid var(--pessego); border-radius: 24px; padding: 32px; }
+.pack-monitor img { width: 100%; max-height: 300px; object-fit: contain; mix-blend-mode: multiply; }
+.pack-monitor-texto { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.pack-monitor-texto h2 { font-size: clamp(24px, 3vw, 32px); }
+.pack-monitor-texto p { margin: 0; color: var(--corpo); }
+.pack-monitor .preco { font-size: 40px; }
+.pack-monitor-links { font-size: 15px; font-weight: 600; }
+@media (max-width: 760px) { .pack-monitor { grid-template-columns: 1fr; padding: 24px; gap: 20px; } .pack-monitor img { max-height: 220px; } }
+
+/* Lista de packs na página inicial */
+.pack-lista { margin-top: 16px; background: var(--cartao); border: 1px solid var(--borda); border-radius: 24px; padding: 28px; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
+.pack-lista-titulo { grid-column: 1 / -1; margin-bottom: 6px; }
+.pack-lista-titulo h4 { margin: 0; font-size: 22px; line-height: 1.3; }
+.pack-lista-titulo p { margin: 4px 0 0; color: var(--corpo); }
+.pack-linha { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 18px; border-radius: 14px; background: var(--pessego-claro); color: var(--texto); text-decoration: none; border: 1px solid transparent; }
+.pack-linha:hover { border-color: var(--acao); }
+.pack-nome { display: flex; flex-direction: column; font-weight: 600; font-size: 15px; line-height: 1.35; min-width: 0; }
+.pack-nome small { font-weight: 400; font-size: 13px; color: var(--secundario); }
+.pack-linha b { font-size: 22px; color: var(--acao); white-space: nowrap; }
+@media (max-width: 520px) { .pack-lista { padding: 18px; grid-template-columns: 1fr; } }
+#pack { scroll-margin-top: 110px; }
