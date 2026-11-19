@@ -51,6 +51,7 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - HP ProDesk 600 G6 Tower: `https://www.pcinfor.pt/equipamentos/hp-prodesk-600-g6-tower/`
 - Lenovo ThinkStation P520: `https://www.pcinfor.pt/equipamentos/lenovo-thinkstation-p520/`
 - Lenovo ThinkStation P520 GTX 1080: `https://www.pcinfor.pt/equipamentos/lenovo-thinkstation-p520-gtx1080/`
+- Lenovo ThinkStation P620 Threadripper PRO RTX 5070: `https://www.pcinfor.pt/equipamentos/lenovo-thinkstation-p620/`
 - HP Z2 G5 Tower Quadro M4000: `https://www.pcinfor.pt/equipamentos/hp-z2-g5-tower-m4000/`
 - HP Z2 G5 Tower RTX 2070: `https://www.pcinfor.pt/equipamentos/hp-z2-g5-tower-rtx2070/`
 - HP Z4 G4 Quadro RTX 4000: `https://www.pcinfor.pt/equipamentos/hp-z4-g4-rtx4000/`
