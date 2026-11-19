@@ -47,6 +47,7 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - Dell OptiPlex 3060 Micro: `https://www.pcinfor.pt/equipamentos/dell-optiplex-3060-micro/`
 - HP ProDesk 400 G4 SFF: `https://www.pcinfor.pt/equipamentos/hp-prodesk-400-g4-sff/`
 - HP ProDesk 400 G4 Mini: `https://www.pcinfor.pt/equipamentos/hp-prodesk-400-g4-mini/`
+- HP EliteDesk 800 G4 SFF: `https://www.pcinfor.pt/equipamentos/hp-elitedesk-800-g4-sff/`
 - HP Z2 G5 SFF: `https://www.pcinfor.pt/equipamentos/hp-z2-g5-sff/`
 - Monitor Dell C3422WE 34″ (só o monitor do pack): `https://www.pcinfor.pt/equipamentos/dell-c3422we-34/`
 - HP ProDesk 600 G6 Tower: `https://www.pcinfor.pt/equipamentos/hp-prodesk-600-g6-tower/`

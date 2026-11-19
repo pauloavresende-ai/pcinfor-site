@@ -34,6 +34,7 @@ COMPUTADORES = {
     "dell-optiplex-3070-micro": ("minipc-optiplex-3070.jpg", 18, "altura", (0, 0, 0.56, 1)),
     "hp-prodesk-400-g4-mini": ("hp-prodesk-400-g4-mini-direita.jpg", 20, "largura", None),
     "hp-prodesk-400-g4-sff": ("hp-prodesk-400-g4-sff.jpg", 30, "largura", None),
+    "hp-elitedesk-800-g4-sff": ("hp-elitedesk-800-g4-sff-angulo.jpg", 28, "altura", None),
     "hp-prodesk-400-g6-mini": ("hp-prodesk-400-g6-mini-direita.jpg", 20, "largura", None),
     "hp-prodesk-400-g6-mini-16gb": ("hp-prodesk-400-g6-mini-direita.jpg", 20, "largura", None),
     "hp-z2-g5-sff": ("hp-z2-g5-direita.jpg", 36, "largura", None),
