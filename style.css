@@ -178,6 +178,26 @@ a:hover { color: var(--laranja-texto-2); }
   .logo img { height: 52px; }
 }
 
+/* Barra de categorias no cabeçalho (igual em todas as páginas) */
+.cat-topo { border-top: 1px solid var(--borda); }
+.cat-topo .wrap { display: flex; align-items: center; justify-content: flex-start; gap: 6px; padding-block: 6px; overflow-x: auto; scrollbar-width: none; }
+.cat-topo .wrap::-webkit-scrollbar { display: none; }
+.cat-topo a {
+  flex: none; display: inline-flex; align-items: center; min-height: 38px; padding: 0 16px;
+  border-radius: 999px; color: var(--texto); font-size: 15px; font-weight: 600; text-decoration: none;
+}
+.cat-topo a:hover { background: var(--pessego-claro); }
+.cat-topo a.atual { background: var(--pessego); color: var(--laranja-texto-2); }
+:where(main [id]) { scroll-margin-top: 150px; }
+@media (max-width: 860px) {
+  .topo .wrap { padding-block: 8px; }
+  .cat-topo .wrap { gap: 2px; padding-block: 4px; justify-content: space-between; }
+  .cat-topo a { min-height: 36px; padding: 0 6px; font-size: 13.5px; }
+  .cat-topo a.atual { padding: 0 9px; }
+  :where(main [id]) { scroll-margin-top: 130px; }
+}
+@media (max-width: 370px) { .cat-topo a { font-size: 12.5px; padding: 0 5px; } .cat-topo a.atual { padding: 0 7px; } }
+
 /* Botões */
 .botoes { display: flex; flex-wrap: wrap; gap: 12px; }
 .btn {
@@ -344,7 +364,7 @@ h3 { font-weight: 700; font-size: 21px; line-height: 1.3; }
 
 /* Categorias de equipamentos (Portáteis, Computadores, Monitores) */
 .categorias {
-  position: sticky; top: 89px; z-index: 10; display: flex; flex-wrap: wrap; gap: 10px;
+  display: flex; flex-wrap: wrap; gap: 10px;
   padding: 12px 0; margin-bottom: 8px; background: var(--fundo, #fff);
 }
 .categorias a {
@@ -354,17 +374,17 @@ h3 { font-weight: 700; font-size: 21px; line-height: 1.3; }
 }
 .categorias a:hover { border-color: var(--acao); }
 .categorias a span { font-size: 13px; font-weight: 600; min-width: 24px; height: 24px; padding: 0 7px; border-radius: 999px; display: grid; place-items: center; background: var(--pessego); color: var(--laranja-texto-2); }
-.categoria { padding-top: 40px; scroll-margin-top: 160px; }
+.categoria { padding-top: 40px; scroll-margin-top: 110px; }
 .categoria-titulo { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 14px; }
 .categoria-titulo h3 { font-size: clamp(26px, 3vw, 32px); letter-spacing: -0.02em; }
 .categoria-conta { font-size: 14px; font-weight: 500; color: var(--secundario); }
 .categoria-frase { margin: 6px 0 20px; color: var(--corpo); }
 .lista-produtos { display: flex; flex-direction: column; gap: 16px; }
 @media (max-width: 860px) {
-  .categorias { top: 77px; gap: 4px; flex-wrap: nowrap; margin-inline: -4px; padding-inline: 4px; overflow-x: auto; scrollbar-width: none; }
+  .categorias { gap: 4px; flex-wrap: nowrap; margin-inline: -4px; padding-inline: 4px; overflow-x: auto; scrollbar-width: none; }
   .categorias a { flex: none; min-height: 40px; padding: 0 8px; font-size: 13px; gap: 6px; }
   .categorias a span { display: none; }
-  .categoria { scroll-margin-top: 150px; }
+  .categoria { scroll-margin-top: 90px; }
 }
 
 /* Opção pack com monitor (páginas de computador) */
@@ -388,7 +408,7 @@ h3 { font-weight: 700; font-size: 21px; line-height: 1.3; }
 .pack-nome small { font-weight: 400; font-size: 13px; color: var(--secundario); }
 .pack-linha b { font-size: 22px; color: var(--acao); white-space: nowrap; }
 @media (max-width: 520px) { .pack-lista { padding: 18px; grid-template-columns: 1fr; } }
-#pack { scroll-margin-top: 110px; }
+#pack { scroll-margin-top: 150px; }
 .pack-foto { width: 72px; height: 54px; flex: none; object-fit: contain; border-radius: 8px; background: #fff; }
 .pack-linha .pack-nome { flex: 1; }
 @media (max-width: 520px) { .pack-foto { width: 56px; height: 42px; } .pack-linha { padding: 12px 14px; gap: 10px; } }
