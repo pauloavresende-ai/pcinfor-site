@@ -15,7 +15,8 @@ A lista de equipamentos da página inicial está dividida em três categorias, c
 
 - Portáteis: `<div class="categoria" id="portateis">` (endereço curto `https://www.pcinfor.pt/portateis/`)
 - Computadores (mini PC e secretária): `id="computadores"` (`https://www.pcinfor.pt/computadores/`)
-- Monitores (monitores e packs com monitor): `id="monitores"` (`https://www.pcinfor.pt/monitores/`)
+- Monitores (só monitores): `id="monitores"` (`https://www.pcinfor.pt/monitores/`)
+- Packs (computador + monitor juntos): `id="packs"` (`https://www.pcinfor.pt/packs/`)
 
 Um equipamento novo entra como `<article class="produto-destaque">` dentro do `<div class="lista-produtos">` da sua categoria. Ao acrescentar ou retirar, atualizar o número no botão da categoria (`<nav class="categorias">`) e o texto "N disponíveis" do bloco.
 
@@ -29,6 +30,7 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - Dell OptiPlex 3070 Micro (só o computador do pack): `https://www.pcinfor.pt/equipamentos/dell-optiplex-3070-micro/`
 - HP ProDesk 400 G4 SFF: `https://www.pcinfor.pt/equipamentos/hp-prodesk-400-g4-sff/`
 - HP Z2 G5 SFF: `https://www.pcinfor.pt/equipamentos/hp-z2-g5-sff/`
+- Monitor Dell C3422WE 34″ (só o monitor do pack): `https://www.pcinfor.pt/equipamentos/dell-c3422we-34/`
 - HP ProDesk 600 G6 Tower: `https://www.pcinfor.pt/equipamentos/hp-prodesk-600-g6-tower/`
 - Lenovo ThinkStation P520: `https://www.pcinfor.pt/equipamentos/lenovo-thinkstation-p520/`
 - Lenovo ThinkStation P520 GTX 1080: `https://www.pcinfor.pt/equipamentos/lenovo-thinkstation-p520-gtx1080/`
