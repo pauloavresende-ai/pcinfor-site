@@ -427,6 +427,11 @@ h3 { font-weight: 700; font-size: 21px; line-height: 1.3; }
 .oferta-pack svg { flex: none; }
 .oferta-pack strong { font-weight: 700; }
 .oferta-pack-lista { margin-top: 12px; }
+/* Stock do fornecedor até 10 unidades: destaque "Últimas unidades" (cartão e página do produto) */
+.etiqueta.ultimas-unidades { display: inline-flex; align-items: center; gap: 7px; background: #B3261E; color: #fff; font-weight: 600; }
+.etiqueta.ultimas-unidades::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: #fff; animation: ultimas-pulsar 1.6s ease-in-out infinite; }
+@keyframes ultimas-pulsar { 0%, 100% { opacity: 1; } 50% { opacity: .35; } }
+@media (prefers-reduced-motion: reduce) { .etiqueta.ultimas-unidades::before { animation: none; } }
 .etiqueta.oferta { display: inline-flex; align-items: center; gap: 6px; background: var(--acao); color: #fff; font-weight: 600; }
 
 /* Botão "Leve em conjunto" junto ao preço do computador */
