@@ -43,6 +43,7 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - HP EliteOne 840 G9 All-in-One: `https://www.pcinfor.pt/equipamentos/hp-eliteone-840-g9/`
 - Bundle All-in-One HP Z2 Mini G9 + Monitor HP Z32 4K: `https://www.pcinfor.pt/equipamentos/hp-z2-mini-g9-z32-bundle/`
 - Lenovo ThinkCentre M700 Tiny: `https://www.pcinfor.pt/equipamentos/lenovo-thinkcentre-m700-tiny/`
+- Lenovo ThinkCentre M720q Tiny: `https://www.pcinfor.pt/equipamentos/lenovo-thinkcentre-m720q-tiny/`
 - Dell OptiPlex 3070 Micro (só o computador do pack): `https://www.pcinfor.pt/equipamentos/dell-optiplex-3070-micro/`
 - HP ProDesk 400 G4 SFF: `https://www.pcinfor.pt/equipamentos/hp-prodesk-400-g4-sff/`
 - HP ProDesk 400 G4 Mini: `https://www.pcinfor.pt/equipamentos/hp-prodesk-400-g4-mini/`
