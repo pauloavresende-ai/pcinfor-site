@@ -41,10 +41,11 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - HP ProDesk 400 G6 Mini: `https://www.pcinfor.pt/equipamentos/hp-prodesk-400-g6-mini/`
 - HP ProDesk 400 G6 Mini 16GB: `https://www.pcinfor.pt/equipamentos/hp-prodesk-400-g6-mini-16gb/`
 - Monitor HP EliteDisplay E23 G4 23″: `https://www.pcinfor.pt/equipamentos/hp-elitedisplay-e23-g4/`
+- Monitor HP EliteDisplay E243m 24″: `https://www.pcinfor.pt/equipamentos/hp-elitedisplay-e243m/`
 
 ## Packs com monitor
 
-Cada computador tem na sua página uma caixa por monitor (`#pack` para o Dell C3422WE 34″, `#pack-e23` para o HP E23 G4 23″), entre os comentários `PACK-MONITOR` e `PACK-E23`. Na página inicial, a categoria Packs tem uma lista por monitor. Regra: quando entra um monitor novo, cria-se um pack com cada computador à venda (preço = computador + monitor, teclado e rato de oferta, slug Stripe `pack-<computador>-<monitor>`).
+Cada computador tem na sua página uma caixa por monitor (`#pack` para o Dell C3422WE 34″, `#pack-e23` para o HP E23 G4 23″, `#pack-e243m` para o HP E243m 24″), entre os comentários `PACK-MONITOR`, `PACK-E23` e `PACK-E243M`. Na página inicial, a categoria Packs tem uma lista por monitor. Regra: quando entra um monitor novo, cria-se um pack com cada computador à venda (preço = computador + monitor, teclado e rato de oferta, slug Stripe `pack-<computador>-<monitor>`).
 
 ## Em falta
 
