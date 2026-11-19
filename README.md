@@ -5,7 +5,7 @@ Site estático, sem base de dados nem plugins, pronto para o GitHub Pages.
 ## Estrutura
 
 - `index.html`: página inicial (Black Friday, equipamentos, serviços, como comprar, contactos)
-- `equipamentos/pack-dell-34/index.html`: página do Pack Dell OptiPlex 3070 + monitor 34″
+- `equipamentos/pack-dell-34/index.html`: endereço antigo do Pack Dell (QR da montra); redireciona para a caixa do pack em `dell-optiplex-3070-micro/#pack`
 - `style.css`: imagem PCinfor (Poppins, laranja #E4521F, fundos pêssego)
 - `img/`: logótipo e fotos
 
@@ -22,7 +22,7 @@ Um equipamento novo entra como `<article class="produto-destaque">` dentro do `<
 
 Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço fica fixo, por isso o QR da montra pode ser impresso e gravado no vídeo sem medo de mudar:
 
-- Pack Dell: `https://www.pcinfor.pt/equipamentos/pack-dell-34/`
+- Pack Dell: `https://www.pcinfor.pt/equipamentos/pack-dell-34/` (redireciona para `dell-optiplex-3070-micro/#pack`)
 - HP EliteBook 840 G7: `https://www.pcinfor.pt/equipamentos/hp-elitebook-840-g7/`
 - HP EliteBook 840 G7 i7: `https://www.pcinfor.pt/equipamentos/hp-elitebook-840-g7-i7/`
 - HP EliteBook 650 G9: `https://www.pcinfor.pt/equipamentos/hp-elitebook-650-g9/`
@@ -68,3 +68,9 @@ Cada pack tem uma imagem combinada (monitor atrás, computador à frente, fundo 
 3. No DNS do domínio: `www` em CNAME para `pauloavresende-ai.github.io`, e o domínio sem `www` com os registos A do GitHub Pages.
 4. O PrestaShop antigo deixa de estar em pcinfor.pt. Se for para manter, passa para um subdomínio (ex.: `loja.pcinfor.pt`) ou fica em modo de manutenção.
 5. Os links antigos do PrestaShop deixam de funcionar: o QR dos vídeos da montra aponta para www.pcinfor.pt, que continua a funcionar.
+
+## Black Friday: preço de referência e packs
+
+- O preço de venda é o "Preço Black Friday". Ao lado aparece riscado o "PVP de referência" (`<div class="preco-antes">`): mesma regra de escalões com +10 pontos percentuais (60%, 50%, 40%, 35%; mesmos mínimos), × 1,23, arredondado para baixo para 9 ou 5. Se der igual ao preço (por causa do mínimo), não se mostra riscado. Pack: soma das duas referências (`<s class="pack-ref">` nas listas). Nunca escrever "preço anterior" ou "antes".
+- Todos os packs têm o mesmo formato resumido: caixa na página do computador com selo "Teclado e rato de oferta" (`oferta-pack`), resumo `pack-resumo` (Computador / Monitor / Oferta, a partir das descrições curtas das duas páginas), preço de referência + preço Black Friday e botão.
+- Em cada página de computador, junto ao preço, o botão `btn-conjunto` "Leve em conjunto com monitor desde X€" (pack mais barato) salta para essa caixa.

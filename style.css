@@ -441,3 +441,10 @@ h3 { font-weight: 700; font-size: 21px; line-height: 1.3; }
 .btn-conjunto small { font-size: 14px; color: var(--corpo); }
 .btn-conjunto .seta { font-size: 22px; font-weight: 700; color: var(--acao); }
 @media (max-width: 520px) { .oferta-pack { font-size: 14px; padding: 8px 14px; border-radius: 16px; } .btn-conjunto b { font-size: 16px; } }
+
+/* Resumo do pack: computador + monitor + oferta (igual em todos os packs) */
+.pack-resumo { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.pack-resumo li { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 10px; font-size: 15px; line-height: 1.45; color: var(--corpo); }
+.pack-resumo li span { font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--laranja-texto); padding-top: 2px; }
+.pack-cabo { font-size: 14px; }
+@media (max-width: 520px) { .pack-resumo li { grid-template-columns: 1fr; gap: 0; } }
