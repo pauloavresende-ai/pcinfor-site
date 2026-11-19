@@ -9,6 +9,16 @@ Site estático, sem base de dados nem plugins, pronto para o GitHub Pages.
 - `style.css`: imagem PCinfor (Poppins, laranja #E4521F, fundos pêssego)
 - `img/`: logótipo e fotos
 
+## Categorias
+
+A lista de equipamentos da página inicial está dividida em três categorias, cada uma com o seu bloco em `index.html`:
+
+- Portáteis: `<div class="categoria" id="portateis">` (endereço curto `https://www.pcinfor.pt/portateis/`)
+- Computadores (mini PC e secretária): `id="computadores"` (`https://www.pcinfor.pt/computadores/`)
+- Monitores (monitores e packs com monitor): `id="monitores"` (`https://www.pcinfor.pt/monitores/`)
+
+Um equipamento novo entra como `<article class="produto-destaque">` dentro do `<div class="lista-produtos">` da sua categoria. Ao acrescentar ou retirar, atualizar o número no botão da categoria (`<nav class="categorias">`) e o texto "N disponíveis" do bloco.
+
 Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço fica fixo, por isso o QR da montra pode ser impresso e gravado no vídeo sem medo de mudar:
 
 - Pack Dell: `https://www.pcinfor.pt/equipamentos/pack-dell-34/`
