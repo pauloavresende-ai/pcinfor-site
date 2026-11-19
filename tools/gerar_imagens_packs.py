@@ -26,6 +26,7 @@ MONITORES = {
     "hp-elitedisplay-e27q-g4": ("hp-e27q-g4-angulo.jpg", 54),
     "hp-elitedisplay-e27d-g4": ("hp-e27d-g4-angulo.jpg", 56),
     "lg-32up550-w": ("lg-32up550-angulo.jpg", 52),
+    "lenovo-thinkvision-t32p-20": ("lenovo-t32p-20-angulo.jpg", 55),
 }
 # computador: (foto, medida real em cm, "altura" ou "largura" a que a medida se refere, recorte opcional (x0,y0,x1,y1) em fração)
 COMPUTADORES = {
