@@ -196,7 +196,8 @@ a:hover { color: var(--laranja-texto-2); }
   .cat-topo a.atual { padding: 0 9px; }
   :where(main [id]) { scroll-margin-top: 130px; }
 }
-@media (max-width: 370px) { .cat-topo a { font-size: 12.5px; padding: 0 5px; } .cat-topo a.atual { padding: 0 7px; } }
+@media (max-width: 480px) { .cat-topo .wrap { gap: 0; padding-inline: 10px; } .cat-topo a { font-size: 12.5px; padding: 0 5px; letter-spacing: -0.2px; } .cat-topo a.atual { padding: 0 6px; } }
+@media (max-width: 370px) { .cat-topo .wrap { padding-inline: 6px; } .cat-topo a { font-size: 11px; padding: 0 3px; } .cat-topo a.atual { padding: 0 5px; } }
 
 /* Botões */
 .botoes { display: flex; flex-wrap: wrap; gap: 12px; }
