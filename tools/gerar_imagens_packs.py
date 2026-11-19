@@ -39,10 +39,12 @@ COMPUTADORES = {
     "hp-z2-g5-sff": ("hp-z2-g5-direita.jpg", 36, "largura", None),
     "hp-prodesk-600-g6-tower": ("hp-prodesk-600-g6-direita.jpg", 34, "altura", None),
     "hp-z2-g5-tower-m4000": ("hp-z2-g5-tower-angulo.jpg", 38, "altura", None),
+    "hp-z2-g5-tower-rtx2070": ("hp-z2-g5-tower-rtx2070-angulo.jpg", 38, "altura", None),
     "hp-z4-g4-rtx4000": ("hp-z4-g4-angulo-direita.jpg", 42, "altura", None),
     "hp-z4-g4-i9-rtx4000": ("hp-z4-g4-angulo-direita.jpg", 42, "altura", None),
     "lenovo-thinkstation-p520": ("lenovo-p520-direita.jpg", 42, "altura", None),
     "lenovo-thinkstation-p520-gtx1080": ("lenovo-p520-direita.jpg", 42, "altura", None),
+    "hp-z2-mini-g5-i9-t1000": ("hp-z2-mini-g5-frente.jpg", 22, "largura", None),
 }
 
 
