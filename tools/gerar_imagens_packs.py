@@ -44,6 +44,7 @@ COMPUTADORES = {
     "hp-z4-g4-i9-rtx4000": ("hp-z4-g4-angulo-direita.jpg", 42, "altura", None),
     "lenovo-thinkstation-p520": ("lenovo-p520-direita.jpg", 42, "altura", None),
     "lenovo-thinkstation-p520-gtx1080": ("lenovo-p520-direita.jpg", 42, "altura", None),
+    "hp-z2-mini-g5-i9-t1000": ("hp-z2-mini-g5-frente.jpg", 22, "largura", None),
 }
 
 
