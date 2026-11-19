@@ -471,3 +471,10 @@ h3 { font-weight: 700; font-size: 21px; line-height: 1.3; }
   .selo-desde small { font-size: 11px; }
 }
 .cartao-preco .preco-rotulo { display: inline-block; background: var(--bf-fundo); color: var(--bf-texto); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 10px; border-radius: 999px; margin-bottom: 6px; }
+
+/* Botão de pack nos cartões de computadores (ao lado de Comprar e Dúvidas) */
+.btn-pack { background: var(--pessego-claro); color: var(--laranja-texto) !important; border: 2px solid var(--acao); }
+.btn-pack:hover { background: var(--pessego); }
+.btn-pack svg { flex: none; color: var(--acao); }
+.botoes .btn-pack { white-space: nowrap; }
+@media (max-width: 520px) { .botoes .btn-pack { flex: 1 1 100%; white-space: normal; text-align: center; padding: 8px 14px; } }
