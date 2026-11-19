@@ -53,6 +53,7 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - HP Z2 G5 Tower Quadro M4000: `https://www.pcinfor.pt/equipamentos/hp-z2-g5-tower-m4000/`
 - HP Z4 G4 Quadro RTX 4000: `https://www.pcinfor.pt/equipamentos/hp-z4-g4-rtx4000/`
 - HP Z4 G4 i9 Quadro RTX 4000: `https://www.pcinfor.pt/equipamentos/hp-z4-g4-i9-rtx4000/`
+- HP Z2 Mini G5 i9 NVIDIA T1000: `https://www.pcinfor.pt/equipamentos/hp-z2-mini-g5-i9-t1000/`
 - HP ProDesk 400 G6 Mini: `https://www.pcinfor.pt/equipamentos/hp-prodesk-400-g6-mini/`
 - HP ProDesk 400 G6 Mini 16GB: `https://www.pcinfor.pt/equipamentos/hp-prodesk-400-g6-mini-16gb/`
 - Monitor HP EliteDisplay E23 G4 23″: `https://www.pcinfor.pt/equipamentos/hp-elitedisplay-e23-g4/`
