@@ -43,10 +43,11 @@ Cada equipamento novo é uma pasta em `equipamentos/<nome-curto>/`. O endereço 
 - Monitor HP EliteDisplay E23 G4 23″: `https://www.pcinfor.pt/equipamentos/hp-elitedisplay-e23-g4/`
 - Monitor HP EliteDisplay E243m 24″: `https://www.pcinfor.pt/equipamentos/hp-elitedisplay-e243m/`
 - Monitor HP EliteDisplay E243d 24″ (dock USB-C): `https://www.pcinfor.pt/equipamentos/hp-elitedisplay-e243d/`
+- Monitor HP EliteDisplay E27q G4 27″: `https://www.pcinfor.pt/equipamentos/hp-elitedisplay-e27q-g4/`
 
 ## Packs com monitor
 
-Cada computador tem na sua página uma caixa por monitor (`#pack` para o Dell C3422WE 34″, `#pack-e23` para o HP E23 G4 23″, `#pack-e243m` para o HP E243m 24″, `#pack-e243d` para o HP E243d 24″ com dock USB-C), entre os comentários `PACK-MONITOR`, `PACK-E23`, `PACK-E243M` e `PACK-E243D`. Na página inicial, a categoria Packs tem uma lista por monitor. Regra: quando entra um monitor novo, cria-se um pack com cada computador à venda (preço = computador + monitor, teclado e rato de oferta, slug Stripe `pack-<computador>-<monitor>`).
+Cada computador tem na sua página uma caixa por monitor (`#pack` para o Dell C3422WE 34″, `#pack-e23` para o HP E23 G4 23″, `#pack-e243m` para o HP E243m 24″, `#pack-e243d` para o HP E243d 24″ com dock USB-C, `#pack-e27q` para o HP E27q G4 27″), entre os comentários `PACK-MONITOR`, `PACK-E23`, `PACK-E243M`, `PACK-E243D` e `PACK-E27Q`. Na página inicial, a categoria Packs tem uma lista por monitor. Regra: quando entra um monitor novo, cria-se um pack com cada computador à venda (preço = computador + monitor, teclado e rato de oferta, slug Stripe `pack-<computador>-<monitor>`).
 
 ## Em falta
 
