@@ -26,6 +26,15 @@ Contexto completo do site (como foi feito, estrutura, funcionalidades, preços, 
 - Verificar sempre com capturas em computador e telemóvel antes do merge.
 - Ao lançar ou retirar equipamentos, atualizar a lista de endereços no README.
 
+## Manter a documentação em dia (obrigatório)
+
+Sempre que um PR acrescenta, altera ou retira uma funcionalidade, o mesmo PR atualiza a documentação. Um PR assim não está pronto sem isto:
+
+- `README.md`: descrever a funcionalidade na secção certa (páginas, funcionalidades, preços, Stripe, packs, ferramentas, lançamento) e acrescentar uma linha à cronologia da secção 1 com a data e o que entrou. Se algo deixou de existir, tirá-lo do README em vez de o deixar desatualizado.
+- `CLAUDE.md`: acrescentar ou mudar a regra quando a alteração cria uma regra nova de trabalho (ex.: uma classe, um marcador ou um passo que todas as páginas têm de ter).
+- "Pontos em aberto": tirar o que ficou resolvido e acrescentar o que ficou por fazer.
+- Na descrição do PR, dizer que secções da documentação foram atualizadas.
+
 ## Segurança
 
 - Nunca pôr chaves do Stripe (ou outras) no repositório nem no chat. A chave está na variável `STRIPE_API_KEY` do ambiente, quando existe.
