@@ -18,7 +18,8 @@ Contexto completo do site (como foi feito, estrutura, funcionalidades, preços, 
 
 ## Ao mexer nas páginas
 
-- Toda a página nova leva a barra `nav.cat-topo` dentro de `header.topo`, com a categoria atual marcada (`class="atual" aria-current="true"`), e o mesmo rodapé legal.
+- Toda a página nova leva a barra `nav.cat-topo` dentro de `header.topo`, com a categoria atual marcada (`class="atual" aria-current="true"`), a caixa de pesquisa `form.pesquisa` a seguir ao logótipo com `<script src=".../pesquisa.js" defer>` antes de `</body>` (copiar de uma página parecida, com os caminhos relativos certos), e o mesmo rodapé legal.
+- A pesquisa lê os cartões de `index.html`: manter em cada cartão o `h3` com o nome, `.preco`, a foto em `.foto img` e o `a.link-detalhes`.
 - Categoria nova: acrescentar à `cat-topo` e ao rodapé de **todas** as páginas, criar o endereço curto que redireciona e verificar a 320–480 px sem scroll horizontal.
 - Cartões por ordem de preço dentro de cada categoria. Ao pôr ou tirar um cartão, atualizar o número em `nav.categorias` e o "N disponíveis" do bloco.
 - Os endereços `equipamentos/<slug>/` estão em QR codes impressos: nunca mudar nem apagar um endereço; se for preciso, deixar uma página que redireciona (como `pack-dell-34`).

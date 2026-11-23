@@ -23,6 +23,13 @@
 <header class="topo">
   <div class="wrap">
     <a class="logo" href="../../index.html"><img src="../../img/logo-pcinfor.png" alt="PCinfor, informática para todos" width="220" height="76"></a>
+    <form class="pesquisa" action="../../index.html#equipamentos" method="get" role="search">
+      <label for="q-topo">Pesquisar artigos</label>
+      <div class="pesquisa-caixa">
+        <input id="q-topo" type="search" name="q" placeholder="Pesquisar artigo, marca ou modelo" autocomplete="off" enterkeyhint="search">
+        <button type="submit" aria-label="Pesquisar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+      </div>
+    </form>
     <nav class="menu" aria-label="Produto">
       <a class="link-sec" href="#destaques">Destaques</a>
       <a class="link-sec" href="#especificacoes">Especificações</a>
@@ -407,5 +414,6 @@
     });
   });
 </script>
+<script src="../../pesquisa.js" defer></script>
 </body>
 </html>
