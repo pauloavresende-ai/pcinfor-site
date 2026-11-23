@@ -40,7 +40,7 @@ Cronologia (do histórico git):
 - **Site estático** no **GitHub Pages**, repositório `pauloavresende-ai/pcinfor-site`, ramo `main`, raiz do repositório.
 - `CNAME` com `www.pcinfor.pt`. No DNS: `www` em CNAME para `pauloavresende-ai.github.io` e o domínio sem `www` com os 4 registos A do GitHub Pages (185.199.108.153, .109.153, .110.153, .111.153).
 - `.nojekyll` (vazio): o Pages serve os ficheiros tal como estão, sem passar pelo Jekyll.
-- Sem JavaScript de terceiros nem fontes externas: a letra Poppins (300 a 700) está em `fonts/` e é carregada por `@font-face` no `style.css`. O único JavaScript é o do botão Comprar das páginas de produto e o que mantém o vídeo do banner a rodar.
+- Sem JavaScript de terceiros nem fontes externas: a letra Poppins (300 a 700) está em `fonts/` e é carregada por `@font-face` no `style.css`. O JavaScript é só nosso: o do botão Comprar das páginas de produto, o que mantém o vídeo do banner a rodar e a pesquisa de artigos (`pesquisa.js`).
 - Todas as páginas partilham o mesmo `style.css` (imagem PCinfor: Poppins, laranja `#E4521F`, fundos pêssego, cores em variáveis no topo).
 - Os links internos usam caminhos relativos para `index.html` (ex.: `../../index.html#packs`), por isso o site funciona também aberto a partir dos ficheiros.
 - O PrestaShop antigo deixou de estar em pcinfor.pt; os links antigos deixaram de funcionar. Os QR da montra apontam para `www.pcinfor.pt` e para endereços fixos de equipamentos, que não mudam.
@@ -50,6 +50,7 @@ Cronologia (do histórico git):
 ```
 index.html              página inicial (todas as categorias e cartões)
 style.css               estilos de todo o site
+pesquisa.js             pesquisa de artigos do cabeçalho (todas as páginas)
 CNAME, .nojekyll        GitHub Pages
 equipamentos/<slug>/    uma página por equipamento (endereço fixo, usado em QR)
 equipamentos/pack-dell-34/   endereço antigo do Pack Dell, redireciona para dell-optiplex-3070-micro/#pack
@@ -108,6 +109,7 @@ Nas páginas dos **monitores**, o botão diz "Leve em conjunto com computador de
 ## 5. Funcionalidades
 
 - **Categorias**: Portáteis, Computadores (mini PC e secretária), All-in-One (computador e ecrã numa peça, sem packs com monitor), Monitores e Packs. Cada uma com bloco próprio na página inicial, contador no botão e "N disponíveis", e endereço curto.
+- **Pesquisa de artigos** (`form.pesquisa` em `header.topo`, todas as páginas, com `pesquisa.js`): caixa "Pesquisar artigo, marca ou modelo" ao lado do logótipo no computador e numa linha própria por baixo do logótipo no telemóvel. Ao escrever mostra até 6 sugestões (foto, nome, categoria e preço) e Enter abre a página inicial só com os artigos encontrados (`index.html?q=...#equipamentos`), com "Ver todos os artigos" e, se não houver nada, "Perguntar no WhatsApp". Lê os cartões de `index.html` (nas outras páginas vai buscá-lo quando o cliente toca na caixa), por isso **não há índice para manter**: um cartão novo fica logo pesquisável. Aceita sem acentos (`portatil`), números como palavra inteira (`24` encontra os 24″ e não 249€) e `16gb` ou `16 gb`. Os packs só aparecem quando se escreve "pack" ou quando não há artigo com aquele nome. Sem JavaScript, o formulário leva à página inicial.
 - **Barra de categorias em todas as páginas** (`nav.cat-topo` dentro de `header.topo`), com a categoria atual marcada. Testada sem scroll horizontal entre 320 e 480 px (regras próprias a 480 e 370 px no CSS).
 - **Cartões de produto** (`article.produto-destaque`): foto, etiquetas, 3 pontos, PVP de referência riscado e Preço Black Friday, botões **Comprar XXX€** (link Stripe direto) e **Dúvidas** (WhatsApp com o nome do equipamento na mensagem), e "Ver fotos e características completas".
 - **Ordenação por preço**: dentro de cada categoria os cartões estão do mais barato para o mais caro; os packs também, dentro de cada monitor.
