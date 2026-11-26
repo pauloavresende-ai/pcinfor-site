@@ -1,6 +1,6 @@
 # Site PCinfor · www.pcinfor.pt
 
-Loja online da PCinfor (PL Resende – Tecnologias de Informação, Lda.), Rua da Alegria 1035, Porto. Vende equipamentos profissionais seminovos (portáteis, computadores, All-in-One, monitores e packs computador + monitor) com pagamento online no Stripe, e mostra os serviços da loja (assistência técnica, tinteiros e toners, venda e consultoria).
+Loja online da PCinfor (PL Resende – Tecnologias de Informação, Lda.), Rua da Alegria 1035, Porto. Vende equipamentos profissionais seminovos (portáteis, computadores, All-in-One, Apple, monitores e packs computador + monitor) com pagamento online no Stripe, e mostra os serviços da loja (assistência técnica, tinteiros e toners, venda e consultoria).
 
 Este ficheiro é o contexto do site: como foi feito, como está organizado e tudo o que já faz. As regras de trabalho para o Claude estão em [`CLAUDE.md`](CLAUDE.md).
 
@@ -75,7 +75,7 @@ card-*.png, pag-*.png   capturas de ecrã de verificação (cartão e página, c
 Por ordem:
 
 1. **Faixa Black Friday** (`.bf`) no topo: "Black Friday todos os dias · Portes grátis no continente · Portáteis desde 379€ · Ver preços".
-2. **Cabeçalho** (`header.topo`): logótipo, links Serviços e Contactos, WhatsApp 963 401 241, e a **barra de categorias** `nav.cat-topo` (Portáteis, Computadores, All-in-One, Monitores, Packs), fixa no topo.
+2. **Cabeçalho** (`header.topo`): logótipo, links Serviços e Contactos, WhatsApp 963 401 241, e a **barra de categorias** `nav.cat-topo` (Portáteis, Computadores, All-in-One, Apple, Monitores, Packs), fixa no topo.
 3. **Hero dos packs** (`.hero-packs`): "Packs completos desde 228€", selo "Teclado e rato de oferta em todos os packs", foto do pack mais barato (Lenovo M700 Tiny + HP E23 G4) e botões "Ver todos os packs" e WhatsApp.
 4. **Banner Black Friday** (`.banner-bf`): "Não esperamos por novembro. Os nossos preços já são de Black Friday.", envio grátis até 31 de dezembro, atalhos para as categorias e o **vídeo** `video/black-friday-destaques.mp4` (sem som, em loop; um pequeno script volta a pô-lo a tocar se parar ou se a página voltar a ficar visível).
 5. **Equipamentos** (`#equipamentos`): botões de categoria com contadores (`nav.categorias`) e um bloco por categoria (`<div class="categoria" id="...">`) com título, "N disponíveis", frase e a lista de cartões.
@@ -108,7 +108,7 @@ Nas páginas dos **monitores**, o botão diz "Leve em conjunto com computador de
 
 ## 5. Funcionalidades
 
-- **Categorias**: Portáteis, Computadores (mini PC e secretária), All-in-One (computador e ecrã numa peça, sem packs com monitor), Monitores e Packs. Cada uma com bloco próprio na página inicial, contador no botão e "N disponíveis", e endereço curto.
+- **Categorias**: Portáteis, Computadores (mini PC e secretária), All-in-One (computador e ecrã numa peça, sem packs com monitor), Apple (equipamentos Apple, sem packs com monitor), Monitores e Packs. Cada uma com bloco próprio na página inicial, contador no botão e "N disponíveis", e endereço curto.
 - **Pesquisa de artigos** (`form.pesquisa` em `header.topo`, todas as páginas, com `pesquisa.js`): caixa "Pesquisar artigo, marca ou modelo" ao lado do logótipo no computador e numa linha própria por baixo do logótipo no telemóvel. Ao escrever mostra até 6 sugestões (foto, nome, categoria e preço) e Enter abre a página inicial só com os artigos encontrados (`index.html?q=...#equipamentos`), com "Ver todos os artigos" e, se não houver nada, "Perguntar no WhatsApp". Lê os cartões de `index.html` (nas outras páginas vai buscá-lo quando o cliente toca na caixa), por isso **não há índice para manter**: um cartão novo fica logo pesquisável. Aceita sem acentos (`portatil`), números como palavra inteira (`24` encontra os 24″ e não 249€) e `16gb` ou `16 gb`. Os packs só aparecem quando se escreve "pack" ou quando não há artigo com aquele nome. Sem JavaScript, o formulário leva à página inicial.
 - **Barra de categorias em todas as páginas** (`nav.cat-topo` dentro de `header.topo`), com a categoria atual marcada. Testada sem scroll horizontal entre 320 e 480 px (regras próprias a 480 e 370 px no CSS).
 - **Cartões de produto** (`article.produto-destaque`): foto, etiquetas, 3 pontos, PVP de referência riscado e Preço Black Friday, botões **Comprar XXX€** (link Stripe direto) e **Dúvidas** (WhatsApp com o nome do equipamento na mensagem), e "Ver fotos e características completas".

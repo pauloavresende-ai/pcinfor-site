@@ -15,6 +15,7 @@
     'portateis': 'portatil portateis laptop notebook',
     'computadores': 'computador computadores pc desktop torre secretaria mini',
     'all-in-one': 'all in one allinone tudo em um',
+    'apple': 'apple mac imac macbook macos',
     'monitores': 'monitor monitores ecra ecras',
     'packs': 'pack packs conjunto monitor'
   };
