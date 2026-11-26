@@ -224,6 +224,7 @@ Cada equipamento é uma pasta em `equipamentos/<slug>/`. O endereço fica fixo, 
 - Dynabook Satellite Pro A50-J: `https://www.pcinfor.pt/equipamentos/dynabook-satellite-pro-a50-j/`
 - Dell Latitude 5440: `https://www.pcinfor.pt/equipamentos/dell-latitude-5440/`
 - HP EliteOne 840 G9 All-in-One: `https://www.pcinfor.pt/equipamentos/hp-eliteone-840-g9/`
+- Apple iMac 27″ Retina 5K (2020): `https://www.pcinfor.pt/equipamentos/apple-imac-27-retina-5k/`
 - Bundle All-in-One HP Z2 Mini G9 + Monitor HP Z32 4K: `https://www.pcinfor.pt/equipamentos/hp-z2-mini-g9-z32-bundle/`
 - Lenovo ThinkCentre M700 Tiny: `https://www.pcinfor.pt/equipamentos/lenovo-thinkcentre-m700-tiny/`
 - Lenovo ThinkCentre M720q Tiny: `https://www.pcinfor.pt/equipamentos/lenovo-thinkcentre-m720q-tiny/`
