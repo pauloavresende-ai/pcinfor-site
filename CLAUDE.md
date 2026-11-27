@@ -29,4 +29,5 @@ Contexto completo do site (como foi feito, estrutura, funcionalidades, preços, 
 
 ## Segurança
 
-- Nunca pôr chaves do Stripe (ou outras) no repositório nem no chat. A chave está na variável `STRIPE_API_KEY` do ambiente, quando existe.
+- Nunca pôr chaves do Stripe (ou outras) no repositório nem no chat.
+- A chave do Stripe (restrita, `rk_live_`: escrita em Products, Prices e Payment Links, leitura em Shipping rates) está guardada como **Network secret** do ambiente para `api.stripe.com`. Não aparece em `STRIPE_API_KEY` nem noutra variável: chamar a API com `curl https://api.stripe.com/v1/...` **sem** cabeçalho de autorização, que o ambiente acrescenta sozinho. Antes de concluir que falta a chave, testar com `curl -s https://api.stripe.com/v1/shipping_rates?limit=1` (200 = funciona). Nos comandos de `criar_links_pagamento.sh`, tirar o `-u`/chave e usar curl direto.
